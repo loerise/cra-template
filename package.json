@@ -1,0 +1,20 @@
+{
+  "name": "cra-template",
+  "version": "1.0.0",
+  "description": "a cra template by loerise",
+  "main": "index.js",
+  "homepage": "https://github.com/loerise/cra-template#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loerise/cra-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/loerise/cra-template/issues"
+  },
+  "keywords": [
+    "cra",
+    "template"
+  ],
+  "author": "Lester Lau",
+  "license": "MIT"
+}

@@ -1,0 +1,63 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "import"
+  ],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/typescript",
+    "plugin:import/warnings",
+    "plugin:react/recommended",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    // 允许使用现代的 ECMAScript 特性
+    "sourceType": "module",
+    // 允许使用 import
+    "ecmaFeatures": {
+      "jsx": true
+      // 允许解析 jsx
+    }
+  },
+  "rules": {
+    "@typescript-eslint/ban-ts-ignore": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-unused-vars": 2,
+    "import/dynamic-import-chunkname": 2,
+    "import/first": 2,
+    "import/newline-after-import": 2,
+    "import/no-duplicates": 2,
+    "import/no-named-as-default": 0,
+    "import/no-unresolved": 2,
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "index",
+          [
+            "sibling",
+            "parent"
+          ],
+          "object"
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "always-and-inside-groups"
+      }
+    ],
+    "react/display-name": 0,
+    "react/prop-types": 0,
+    "no-console": 1
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
