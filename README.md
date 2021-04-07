@@ -1,1 +1,1 @@
-# A cra template by loerise
+# the cra templates by loerise

@@ -1,8 +1,7 @@
 {
   "name": "@loerise/cra-template",
   "version": "1.0.1",
-  "description": "a cra template by loerise",
-  "main": "index.js",
+  "description": "the cra template with typescript by loerise",
   "homepage": "https://github.com/loerise/cra-template#readme",
   "repository": {
     "type": "git",
@@ -16,5 +15,9 @@
     "template"
   ],
   "author": "Lester Lau",
-  "license": "MIT"
+  "license": "MIT",
+  "files": [
+    "template",
+    "template.json"
+  ]
 }
