@@ -1,24 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 import { RootContext } from './libs/context'
-import { useRequestLoading } from './libs/hook'
-import { app } from './libs/reducer'
+import { useRequest } from './libs/hook'
 import { jsonplaceholder } from './libs/service'
 
 function App(): React.ReactElement {
-  const postsLoading = useRequestLoading(jsonplaceholder.getAllPosts)
-  const postLoading = useRequestLoading(jsonplaceholder.getPostsById)
-
-  useEffect(() => {
-    app.getAllPosts().subscribe((steam: unknown) => {
-      console.log(steam)
-    })
-  }, [])
-
-  useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
-    jsonplaceholder.getPostsById(1).subscribe(() => {})
-  }, [])
+  const { loading: postsLoading } = useRequest(jsonplaceholder.getAllPosts, { manual: false })
+  const { loading: postLoading } = useRequest(jsonplaceholder.getPostsById, { manual: false, params: 1 })
 
   return (
     <RootContext.Provider value={{}}>
